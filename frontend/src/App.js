@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom"
 import WebFont from "webfontloader"
 import react from "react"
 import { useEffect } from "react"
+import Footer from "./component/layout/Footer/Footer"
 
 function App() {
   useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
   return (
     <Router>
       <Header />
+      <Footer />
     </Router>
 
   );
