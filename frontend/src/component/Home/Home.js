@@ -7,21 +7,27 @@ import { getProduct } from "../../actions/productAction"
 import { useSelector, useDispatch } from "react-redux"
 import Loader from '../layout/Loader/Loader';
 
-const product = {
-  name: "Blue Tshirt",
-  price: "3000",
-  _id: "sudhanshu",
-  images: [{ url: "https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_960_720.jpg" }]
-}
+import { useAlert } from "react-alert"
+// const product = {
+//   name: "Blue Tshirt",
+//   price: "3000",
+//   _id: "sudhanshu",
+//   images: [{ url: "https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_960_720.jpg" }]
+// }
 
 function Home() {
+
+  const alert = useAlert()
 
   const dispatch = useDispatch()
   const { loading, error, products, productsCount } = useSelector((state) => state.products)
 
   useEffect(() => {
+    if (error) {
+      return alert.error(error)
+    }
     dispatch(getProduct())
-  }, [dispatch])
+  }, [dispatch, error])
 
 
   return (
