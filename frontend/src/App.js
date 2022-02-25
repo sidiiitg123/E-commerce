@@ -8,6 +8,8 @@ import { useEffect } from "react"
 import Footer from "./component/layout/Footer/Footer"
 import Home from "./component/Home/Home"
 import Loader from './component/layout/Loader/Loader';
+import ProductDetails from './component/Product/ProductDetails';
+
 
 function App() {
   useEffect(() => {
@@ -21,6 +23,7 @@ function App() {
     <Router>
       <Header />
       <Route exact path="/" component={Home} />
+      <Route exact path="/product/:id" component={ProductDetails} />
 
       <Footer />
     </Router>
