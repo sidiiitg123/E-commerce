@@ -7,6 +7,7 @@ import react from "react"
 import { useEffect } from "react"
 import Footer from "./component/layout/Footer/Footer"
 import Home from "./component/Home/Home"
+import Loader from './component/layout/Loader/Loader';
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
     <Router>
       <Header />
       <Route exact path="/" component={Home} />
+
       <Footer />
     </Router>
 
