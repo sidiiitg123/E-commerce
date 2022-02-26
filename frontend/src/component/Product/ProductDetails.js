@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect } from "react";
 import Carousel from "react-material-ui-carousel";
 import "./ProductDetails.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -8,6 +8,7 @@ import "./ProductDetails.css"
 import ReviewCard from "./ReviewCard"
 import Loader from "../layout/Loader/Loader"
 import { useAlert } from "react-alert"
+import MetaData from "../layout/MetaData";
 
 function ProductDetails({ match }) {
   const dispatch = useDispatch()
@@ -36,6 +37,7 @@ function ProductDetails({ match }) {
   return (
     <Fragment>
       {loading ? <Loader /> : <Fragment>
+        <MetaData title={`${product.name}------CARTEASY`} />
         <div className="ProductDetails">
           <div className="product-Details-carousel">
             <Carousel>
