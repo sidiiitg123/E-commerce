@@ -55,11 +55,12 @@ function UserOptions({ user }) {
 
   return (
     <Fragment>
+      <Backdrop open={open} style={{ zIndex: "10" }} />
       <SpeedDial
         ariaLabel="SpeedDial tooltip example"
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
-        // style={{ zIndex: "11" }}
+        style={{ zIndex: "11" }}
         open={open}
         direction="down"
         className="speedDial"

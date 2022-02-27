@@ -8,7 +8,7 @@ const fileUpload = require("express-fileupload")
 app.use(express.json())
 app.use(cookieParser())
 app.use(fileUpload())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }))
 
 //Route imports
 
