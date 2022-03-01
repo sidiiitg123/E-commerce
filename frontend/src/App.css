@@ -2,6 +2,15 @@
   margin: 0;
   scroll-behavior: smooth;
 }
+
+/* chrome,safari,edge,opera*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  /* -moz-appearance: none; */
+  /* appearance: none; */
+  margin: 0;
+}
 .greenColor {
   color: green;
 }
